@@ -22,11 +22,10 @@ distributions {
 
 dependencies {
     compile(group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25')
-    compile(group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25')
     compile(group: 'com.sun.mail', name: 'javax.mail', version: '1.4.7')
 }
 
-if (hasProperty('gbArtifactoryUser') && hasProperty('gbArtifactoryPassword') && hasProperty('gbArtifactoryUploadUrl')) {
+if (hasGbUploadArtifactory) {
     publishing {
         repositories {
             maven {

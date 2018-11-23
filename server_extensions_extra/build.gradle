@@ -1,5 +1,4 @@
 apply plugin: "java"
-apply plugin: "distribution"
 apply plugin: "com.generalbytes.gradle.main"
 apply plugin: 'maven-publish'
 
@@ -16,6 +15,16 @@ configurations {
     runtimeNoArtifact {
         extendsFrom compile
     }
+
+    // handle Github (e.g. community) vs GENERAL BYTES dichotomy
+    generalBytesCompile
+    githubCompile
+    if (hasGbArtifactory) {
+        compile { extendsFrom generalBytesCompile }
+    } else {
+        compile { extendsFrom githubCompile }
+
+    }
 }
 
 artifacts {
@@ -24,9 +33,8 @@ artifacts {
 
 dependencies {
     compile project(':server_extensions_api')
-    compile(group: 'com.azazar', name: 'bitcoin-json-rpc-client', version: '1.1')
+    compile(group: 'com.github.Polve', name: 'JavaBitcoindRpcClient', version:javaBitcoindRpcVersion)
     compile(group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25')
-    compile(group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25')
     compile(group: 'com.github.mmazi', name: 'rescu', version: '1.9.1')
     compile(group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: '2.0.1')
     compile(group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0')
@@ -40,24 +48,30 @@ dependencies {
     compile(group: 'org.knowm.xchange', name: 'xchange-itbit', version: '4.2.3')
     compile(group: 'org.knowm.xchange', name: 'xchange-bittrex', version: '4.2.3')
     compile(group: 'org.knowm.xchange', name: 'xchange-hitbtc', version: '4.2.3')
+    compile(group: 'org.web3j', name: 'core', version: '3.6.0')
+    compile(group: 'org.web3j', name: 'crypto', version: '3.6.0')
+    compile(group: 'org.web3j', name: 'utils', version: '3.6.0')
+    compile(group: 'org.web3j', name: 'abi', version: '3.6.0')
+    compile(group: 'com.squareup.okhttp3', name: 'okhttp', version: '3.8.1')
+    compile(group: 'io.reactivex', name: 'rxjava', version: '1.2.4')
+    compile(group: 'org.bitcoinj', name: 'bitcoinj-core', version: '0.14.1') //bitcoinj
+
+    runtime(group: 'com.madgag.spongycastle', name: 'core', version: '1.51.0.0')
+    runtime(group: 'com.google.protobuf',  name: 'protobuf-java', version: '2.6.1')
+
+    generalBytesCompile(group: 'com.generalbytes.bitrafael.public', name: 'bitrafael-client', version: bitrafaelVersion)
+    githubCompile(group: 'com.github.GENERALBYTESCOM.bitrafael_public', name: 'bitrafael-client', version: bitrafaelVersion)
 
     testCompile (group: 'junit', name: 'junit', version: '4.10')
+    testCompile(group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3')
+    testCompile(group: 'ch.qos.logback', name: 'logback-core', version: '1.2.3')
 }
 
 dependencySubstitutions {
     substitute file(batmDependencySubstitutionConfig)
 }
 
-distributions {
-    main {
-        contents {
-            from jar
-            from configurations.runtime
-        }
-    }
-}
-
-if (hasProperty('gbArtifactoryUser') && hasProperty('gbArtifactoryPassword') && hasProperty('gbArtifactoryUploadUrl')) {
+if (hasGbUploadArtifactory) {
     publishing {
         repositories {
             maven {
@@ -80,4 +94,10 @@ if (hasProperty('gbArtifactoryUser') && hasProperty('gbArtifactoryPassword') && 
 dependencyVerifications {
     checksums batmDependencyChecksumsConfig
     printUnusedAssertions false
+
+    // additional configurations
+    if (hasGbArtifactory) {
+        configuration project.configurations.generalBytesCompile
+    }
+    configuration project.configurations.githubCompile
 }
