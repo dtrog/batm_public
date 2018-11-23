@@ -27,6 +27,7 @@ public class Currencies {
 
     public static final String BTC = "BTC";
     public static final String BCH = "BCH"; //Bitcoin Cash
+    public static final String BFR = "BFR"; //Belgian e-Frank
     public static final String BTCP = "BTCP"; //Bitcoin Private
     public static final String BTX = "BTX"; //BitCore
     public static final String BSD = "BSD"; //BitSend
@@ -137,6 +138,7 @@ public class Currencies {
         List<String> crypto = new ArrayList<>();
         crypto.add(BTC);
         crypto.add(BCH);
+        crypto.add(BFR);
         crypto.add(BTCP);
         crypto.add(BTX);
         crypto.add(BSD);
