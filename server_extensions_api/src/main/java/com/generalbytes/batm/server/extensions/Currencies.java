@@ -65,7 +65,6 @@ public class Currencies {
     public static final String TKN = "TKN";
     public static final String WDC = "WDC";
     public static final String XMR = "XMR";
-    public static final String ANON = "ANON"; // ANON, formerly Anonymous Bitcoin
     public static final String USDT = "USDT";
     public static final String XZC = "XZC"; //Zcoin
 
@@ -138,6 +137,7 @@ public class Currencies {
     static {
         List<String> crypto = new ArrayList<>();
         crypto.add(BTC);
+        crypto.add(BFR);
         crypto.add(BCH);
         crypto.add(BFR);
         crypto.add(BTCP);
@@ -174,7 +174,6 @@ public class Currencies {
         crypto.add(TKN);
         crypto.add(WDC);
         crypto.add(XMR);
-        crypto.add(ANON);
         crypto.add(USDT);
         crypto.add(XZC);
 

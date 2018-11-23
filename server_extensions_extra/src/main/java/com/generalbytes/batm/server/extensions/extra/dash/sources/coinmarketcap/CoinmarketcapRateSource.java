@@ -104,7 +104,6 @@ public class CoinmarketcapRateSource implements IRateSource {
         result.add(Currencies.BURST);
         result.add(Currencies.DOGE);
         result.add(Currencies.ECA);
-        result.add(Currencies.ANON);
         result.add(Currencies.LSK);
         result.add(Currencies.USDT);
         result.add(Currencies.XZC);
