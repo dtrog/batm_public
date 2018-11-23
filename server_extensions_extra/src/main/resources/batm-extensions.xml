@@ -764,7 +764,8 @@
         </ratesource>
 	<cryptologo cryptocurrency="CLOAK" file="cloak.png"/>
 	<cryptologo cryptocurrency="CLOAK" file="cloak.svg"/>
-    </extension>    
+    </extension>
+
     <extension class="com.generalbytes.batm.server.extensions.extra.lisk.LiskExtension" >
         <wallet prefix="liskBinance" name="Lisk">
             <param name="address" />
@@ -785,6 +786,22 @@
         </ratesource>
         <cryptologo cryptocurrency="LSK" file="lisk.png"/>
         <cryptologo cryptocurrency="LSK" file="lisk.svg"/>
+    </extension>
+    <extension class="com.generalbytes.batm.server.extensions.extra.befrank.BefrankExtension" >
+        <wallet prefix="befrankd" name="Befrankd">
+            <param name="protocol" />
+            <param name="user" />
+            <param name="password" />
+            <param name="host" />
+            <param name="port" />
+            <cryptocurrency>BFR</cryptocurrency>
+        </wallet>
+        <ratesource prefix="befrankfix" name ="Fix Price" >
+            <param name="price" />
+            <cryptocurrency>BFR</cryptocurrency>
+        </ratesource>
+        <cryptologo cryptocurrency="BFR" file="bfr.png"/>
+        <cryptologo cryptocurrency="BFR" file="bfr.svg"/>
     </extension>
     <!--<extension class="com.generalbytes.batm.server.extensions.extra.examples.TransactionExtension" />-->
     <!--<extension class="com.generalbytes.batm.server.extensions.extra.examples.rest.RESTExampleExtension" />-->
