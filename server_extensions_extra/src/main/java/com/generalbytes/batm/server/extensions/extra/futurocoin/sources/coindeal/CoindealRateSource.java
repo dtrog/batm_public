@@ -2,10 +2,11 @@ package com.generalbytes.batm.server.extensions.extra.futurocoin.sources.coindea
 
 import com.generalbytes.batm.server.extensions.Currencies;
 import com.generalbytes.batm.server.extensions.IRateSource;
+import si.mazi.rescu.RestProxyFactory;
+
 import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
-import si.mazi.rescu.RestProxyFactory;
 
 public class CoindealRateSource implements IRateSource {
 

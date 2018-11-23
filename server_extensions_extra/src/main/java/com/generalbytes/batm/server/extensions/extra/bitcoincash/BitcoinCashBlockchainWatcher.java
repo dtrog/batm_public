@@ -17,17 +17,14 @@
  ************************************************************************************/
 package com.generalbytes.batm.server.extensions.extra.bitcoincash;
 
-import wf.bitcoin.javabitcoindrpcclient.BitcoindRpcClient;
-import wf.bitcoin.javabitcoindrpcclient.BitcoinRPCException;
-import com.generalbytes.batm.server.extensions.Currencies;
 import com.generalbytes.batm.server.extensions.payment.IBlockchainWatcher;
 import com.generalbytes.batm.server.extensions.payment.IBlockchainWatcherAddressListener;
 import com.generalbytes.batm.server.extensions.payment.IBlockchainWatcherTransactionListener;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import wf.bitcoin.javabitcoindrpcclient.BitcoinRPCException;
+import wf.bitcoin.javabitcoindrpcclient.BitcoindRpcClient;
 
-import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;

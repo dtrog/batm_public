@@ -19,7 +19,6 @@ package com.generalbytes.batm.server.extensions.extra.ethereum;
 
 import com.generalbytes.batm.server.extensions.Currencies;
 import com.generalbytes.batm.server.extensions.IWallet;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.web3j.crypto.Credentials;

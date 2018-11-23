@@ -26,10 +26,8 @@ import com.generalbytes.bitrafael.api.wallet.eth.MasterPrivateKeyETH;
 import com.generalbytes.bitrafael.api.wallet.eth.WalletToolsETH;
 import org.web3j.crypto.Credentials;
 import org.web3j.crypto.ECKeyPair;
-import org.web3j.crypto.MnemonicUtils;
-
-
 import org.web3j.crypto.Hash;
+import org.web3j.crypto.MnemonicUtils;
 
 import java.security.SecureRandom;
 

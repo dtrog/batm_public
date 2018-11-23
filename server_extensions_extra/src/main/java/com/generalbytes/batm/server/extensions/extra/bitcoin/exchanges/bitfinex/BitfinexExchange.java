@@ -20,13 +20,10 @@
  ************************************************************************************/
 package com.generalbytes.batm.server.extensions.extra.bitcoin.exchanges.bitfinex;
 
-import java.io.IOException;
-import java.math.BigDecimal;
-import java.util.*;
-import java.util.stream.Collectors;
-
 import com.generalbytes.batm.server.coinutil.DDOSUtils;
-import com.generalbytes.batm.server.extensions.*;
+import com.generalbytes.batm.server.extensions.IExchangeAdvanced;
+import com.generalbytes.batm.server.extensions.IRateSourceAdvanced;
+import com.generalbytes.batm.server.extensions.ITask;
 import org.knowm.xchange.Exchange;
 import org.knowm.xchange.ExchangeFactory;
 import org.knowm.xchange.ExchangeSpecification;
@@ -44,6 +41,11 @@ import org.knowm.xchange.service.marketdata.MarketDataService;
 import org.knowm.xchange.service.trade.TradeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
+import java.math.BigDecimal;
+import java.util.*;
+import java.util.stream.Collectors;
 
 
 public class BitfinexExchange implements IExchangeAdvanced, IRateSourceAdvanced {

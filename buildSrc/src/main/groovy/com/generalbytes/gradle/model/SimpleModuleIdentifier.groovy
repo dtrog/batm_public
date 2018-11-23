@@ -1,11 +1,7 @@
 package com.generalbytes.gradle.model
 
 import groovy.transform.EqualsAndHashCode
-import groovy.transform.ToString
 import org.gradle.api.artifacts.ModuleIdentifier
-
-import java.util.regex.Matcher
-import java.util.regex.Pattern
 
 @EqualsAndHashCode
 class SimpleModuleIdentifier implements ModuleIdentifier {

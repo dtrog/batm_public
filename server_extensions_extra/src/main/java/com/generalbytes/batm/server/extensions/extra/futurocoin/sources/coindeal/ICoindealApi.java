@@ -1,6 +1,7 @@
 package com.generalbytes.batm.server.extensions.extra.futurocoin.sources.coindeal;
 
 import com.generalbytes.batm.server.extensions.extra.futurocoin.sources.coindeal.dto.CoindealResponse;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;

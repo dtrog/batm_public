@@ -1,7 +1,7 @@
 package com.generalbytes.gradle.plugin
 
-import com.generalbytes.gradle.task.DependencyVerification
 import com.generalbytes.gradle.task.DependencyChecksums
+import com.generalbytes.gradle.task.DependencyVerification
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 

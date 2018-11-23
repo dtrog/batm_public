@@ -17,13 +17,12 @@
  ************************************************************************************/
 package com.generalbytes.batm.server.extensions.extra.sumcoin.sumcored;
 
-import wf.bitcoin.javabitcoindrpcclient.BitcoinRPCException;
-import wf.bitcoin.javabitcoindrpcclient.BitcoinJSONRPCClient;
 import com.generalbytes.batm.server.extensions.IWallet;
 import com.generalbytes.batm.server.extensions.extra.sumcoin.SumcoinExtension;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import wf.bitcoin.javabitcoindrpcclient.BitcoinJSONRPCClient;
+import wf.bitcoin.javabitcoindrpcclient.BitcoinRPCException;
 
 import java.math.BigDecimal;
 import java.net.MalformedURLException;

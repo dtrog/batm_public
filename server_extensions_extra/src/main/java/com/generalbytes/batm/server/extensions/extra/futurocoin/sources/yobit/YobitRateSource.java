@@ -2,13 +2,12 @@ package com.generalbytes.batm.server.extensions.extra.futurocoin.sources.yobit;
 
 import com.generalbytes.batm.server.extensions.Currencies;
 import com.generalbytes.batm.server.extensions.IRateSourceAdvanced;
+import com.generalbytes.batm.server.extensions.extra.futurocoin.sources.yobit.dto.Ticker;
+import si.mazi.rescu.RestProxyFactory;
 
 import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
-
-import com.generalbytes.batm.server.extensions.extra.futurocoin.sources.yobit.dto.Ticker;
-import si.mazi.rescu.RestProxyFactory;
 
 public class YobitRateSource implements IRateSourceAdvanced {
 

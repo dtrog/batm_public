@@ -48,15 +48,14 @@ public class BefrankExtension extends AbstractExtension implements ICryptoAddres
                 String username = st.nextToken();
                 String password = st.nextToken();
                 String hostname = st.nextToken();
-                String port = st.nextToken();
-                String accountName = "";
+                String port = "";
                 if (st.hasMoreTokens()) {
-                    accountName = st.nextToken();
+                    port = st.nextToken();
                 }
 
 
-                if (protocol != null && username != null && password != null && hostname != null && port != null && accountName != null) {
-                    return new BefrankWallet(hostname, Integer.valueOf(port), username, password, accountName);
+                if (protocol != null && username != null && password != null && hostname != null && port != null) {
+                    return new BefrankWallet(hostname, Integer.valueOf(port).intValue(), username, password);
                 }
             }
         }

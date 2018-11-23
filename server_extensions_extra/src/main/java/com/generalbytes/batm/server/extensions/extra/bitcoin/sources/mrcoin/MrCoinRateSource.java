@@ -21,7 +21,6 @@
 package com.generalbytes.batm.server.extensions.extra.bitcoin.sources.mrcoin;
 
 import com.generalbytes.batm.server.extensions.Currencies;
-import com.generalbytes.batm.server.extensions.Currencies;
 import com.generalbytes.batm.server.extensions.IRateSourceAdvanced;
 import com.generalbytes.batm.server.extensions.extra.bitcoin.sources.mrcoin.dto.RateInfo;
 import si.mazi.rescu.RestProxyFactory;

@@ -33,7 +33,9 @@ import com.generalbytes.batm.server.extensions.extra.bitcoin.wallets.bitgo.v2.Bi
 import com.generalbytes.batm.server.extensions.watchlist.IWatchList;
 
 import java.math.BigDecimal;
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.StringTokenizer;
 
 public class BitcoinExtension extends AbstractExtension{
     private IExtensionContext ctx;
